@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muhammed Azeez — Resume</title>
+  <style>
+    /* Clean, responsive resume */
+    :root{
+      --accent: #8b0000;
+      --bg: #ffffff;
+      --page-bg: #f3f4f6;
+      --text: #111;
+      --muted: #555;
+      --max-width: 900px;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      background: var(--page-bg);
+      color: var(--text);
+    }
+
+    .container{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+    }
+
+    .sheet{
+      width:100%;
+      max-width:var(--max-width);
+      background:var(--bg);
+      padding:36px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+      border-radius:8px;
+    }
+
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+
+    .name-block{
+      display:flex;
+      flex-direction:column;
+    }
+
+    h1{
+      color:var(--accent);
+      margin:0;
+      font-size:30px;
+      letter-spacing:0.3px;
+    }
+
+    .meta{
+      font-size:14px;
+      color:var(--muted);
+      margin-top:6px;
+    }
+
+    .contact{
+      text-align:right;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .contact a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .lede{
+      margin-top:6px;
+      font-size:15px;
+      color:#222;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:20px;
+      margin-top:18px;
+    }
+
+    /* When small screen stack columns */
+    @media (max-width:860px){
+      .grid{ grid-template-columns: 1fr; }
+      .contact{ text-align:left; margin-top:10px; }
+    }
+
+    section{ margin-bottom:16px; }
+
+    h2{
+      font-size:16px;
+      margin:0 0 8px 0;
+      color:#222;
+      border-bottom:2px solid #eee;
+      padding-bottom:6px;
+    }
+
+    .muted{ color:var(--muted); font-size:14px; }
+
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+
+    .label{ font-weight:600; color:#222; margin-bottom:6px; }
+    .small{ font-size:13px; color:var(--muted); }
+
+    ul.clean{
+      padding-left:1.05rem;
+      margin:0;
+    }
+
+    .skills {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:6px;
+    }
+
+    .skill-pill{
+      background:#f5f5f5;
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:13px;
+      color:#333;
+    }
+
+    footer{
+      margin-top:18px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    @media print {
+      html,body{ background: #fff; }
+      .container{ padding:0; }
+      .sheet{ box-shadow:none; border-radius:0; max-width:100%; padding:18px; }
+      .contact a{ color: #000; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <main class="sheet" role="main" aria-labelledby="name-heading">
+      <header>
+        <div class="name-block">
+          <h1 id="name-heading">Muhammed Azeez</h1>
+          <div class="meta">Studying at Riga Nordic University</div>
+          <div class="lede">Computer science student — interested in web development, machine learning, and small app projects.</div>
+        </div>
+
+        <div class="contact" aria-label="contact information">
+          Riga, Latvia<br/>
+          <a href="mailto:your.email@example.com">your.email@example.com</a><br/>
+          +371 2XX XXXX (optional)
+        </div>
+      </header>
+
+      <div class="grid">
+        <!-- Main column -->
+        <div>
+          <section aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <p class="muted">
+              Currently studying at Riga Nordic University. Replace this paragraph with a 2–4 sentence personal summary:
+              highlight your major, relevant experience, technologies you know, and the kind of roles or projects you seek.
+            </p>
+          </section>
+
+          <section aria-labelledby="education-heading">
+            <h2 id="education-heading">Education</h2>
+            <div class="two-col">
+              <div>
+                <div class="label">Riga Nordic University</div>
+                <div class="small">BSc in — Program / Major (expected YYYY)</div>
+              </div>
+              <div>
+                <div class="label">Relevant coursework</div>
+                <div class="small">Algorithms, Data Structures, Web Development, Machine Learning (example)</div>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects (select)</h2>
+            <ul class="clean">
+              <li>
+                <strong>Project Name</strong> — Short description (1 sentence). Tech: HTML, CSS, JavaScript, Python.
+              </li>
+              <li>
+                <strong>Project Name</strong> — Short description. Link: <a href="#" target="_blank" rel="noopener">github.com/you/repo</a>
+              </li>
+            </ul>
+          </section>
+
+          <section aria-labelledby="experience-heading">
+            <h2 id="experience-heading">Experience (optional)</h2>
+            <div>
+              <div style="display:flex;justify-content:space-between;align-items:baseline;">
+                <div><strong>Role — Company</strong></div>
+                <div class="small">Month YYYY — Month YYYY</div>
+              </div>
+              <p class="muted" style="margin-top:6px;">1–2 short bullets describing accomplishments or responsibilities. Use metrics where possible.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- Side column -->
+        <aside>
+          <section aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills</h2>
+            <div class="skills" role="list">
+              <div class="skill-pill">HTML</div>
+              <div class="skill-pill">CSS</div>
+              <div class="skill-pill">JavaScript</div>
+              <div class="skill-pill">Python</div>
+              <div class="skill-pill">Git</div>
+              <div class="skill-pill">Machine Learning</div>
+            </div>
+          </section>
+
+          <section aria-labelledby="languages-heading" style="margin-top:14px;">
+            <h2 id="languages-heading">Languages</h2>
+            <p class="small">English — Fluent<br/>Other language — Level</p>
+          </section>
+
+          <section aria-labelledby="extras-heading" style="margin-top:14px;">
+            <h2 id="extras-heading">Extras</h2>
+            <p class="small">Certificates, contests, volunteer work, or interests (short list).</p>
+          </section>
+        </aside>
+      </div>
+
+      <footer>
+        Tip: Replace placeholder text and contact details. Want a different color, two-column print layout, or downloadable PDF-ready version? Tell me the color and layout and I’ll generate it.
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
